@@ -4,6 +4,9 @@ import { useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
 
 function Header(){
+
+const {logout} = useContext(AuthContext)
+
     return(
         <nav className="menu-nav">
             <ul className="menu-header">
@@ -11,13 +14,16 @@ function Header(){
                     <NavLink to ='/'>Home</NavLink>
                 </li>
                 <li className="menu-item">
-                    <NavLink to ='login'>Login</NavLink>
-                </li>
-                <li className="menu-item">
                     <NavLink to ='perfil'>Perfil</NavLink>
                 </li>
                 <li className="menu-item">
                     <NavLink to ='contato'>Contato</NavLink>
+                </li>
+                {/* <li className="menu-item">
+                    <NavLink to ='login'>Login</NavLink>
+                </li> */}
+                <li>
+                    <button onClick={logout}>Logout</button>
                 </li>
             </ul>
         </nav>

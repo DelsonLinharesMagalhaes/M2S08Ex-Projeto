@@ -23,7 +23,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Header />
+        { isLoggedIn && <Header /> }
         <Routes>
           <Route path='/login' exact element={!isLoggedIn ? <Login /> : <Navigate to='/home' />} />
           <Route path='/' exact element={isLoggedIn ? <Home /> : <Navigate to='/login' />} />

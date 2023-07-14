@@ -45,12 +45,15 @@ function Login(){
     }
 
     return(
-        <form style={{'maxWidth': '320px'}} onSubmit={handleSubmit}>
-            <input required type='email' value={email} ref={emailRef} placeholder="Digite seu e-mail" onChange={handleEmailChange}/>
-            <input required type='password' minLenght='8' value={password} ref={passwordRef} placeholder='Digite sua senha' onChange={handlePasswordChange}/>
-            {errorForm && <span>E-mail e/ou senha inválidos</span>}
-            <button type='submit'>Entrar</button>
-        </form>
+        <>
+            <h1>Login</h1>
+            <form style={{'maxWidth': '320px'}} onSubmit={handleSubmit}>
+                <input required type='email' value={email} ref={emailRef} placeholder="Digite seu e-mail" onChange={handleEmailChange}/>
+                <input required type='password' minLenght='8' value={password} ref={passwordRef} placeholder='Digite sua senha' onChange={handlePasswordChange}/>
+                {errorForm && <span>E-mail e/ou senha inválidos</span>}
+                <button type='submit'>Entrar</button>
+            </form>
+        </>
     )
 }
 export default Login
