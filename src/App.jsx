@@ -25,10 +25,12 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' exact element={<Home />} />
-          <Route path='login' exact element={<Login />} />
-          <Route path='perfil' element={<Perfil />} />
-          <Route path='contato' element={<Contato />} />
+          <Route path='/login' exact element={!isLoggedIn ? <Login /> : <Navigate to='/home' />} />
+          <Route path='/' exact element={isLoggedIn ? <Home /> : <Navigate to='/login' />} />
+          <Route path='/login' exact element={isLoggedIn ? <Login /> : <Navigate to='/login' />} />
+          <Route path='/home' element={isLoggedIn ? <Home /> : <Navigate to='/login' />} />
+          <Route path='/perfil' element={isLoggedIn ? <Perfil /> : <Navigate to='/login' />} />
+          <Route path='/contato' element={isLoggedIn ? <Contato /> : <Navigate to='/login' />} />
         </Routes>
       </Router>
     </div>
