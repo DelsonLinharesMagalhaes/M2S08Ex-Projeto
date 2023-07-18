@@ -2,11 +2,15 @@
     "usuarios": [
       {
         "id": 1,
+        "nome": "Delson",
+        "sobrenome": "Magalhaes",
         "email": "dl_magalhaes@hotmail.com",
         "password": "12345678"
       },
       {
         "id": 2,
+        "nome": "Delson",
+        "sobrenome": "Magalhaes",
         "email": "delson.linhares68@gmail.com",
         "password": "12345678"
       }

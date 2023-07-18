@@ -9,8 +9,10 @@ import Home from './Pages/Home/Home'
 import Perfil from './Pages/Perfil/Perfil'
 import Contato from './Pages/Contato/Contato'
 import Header from './Components/Header/Header'
+import Cadastro from './Pages/Cadastro/Cadastro'
 import { AuthContext } from './context/AuthContext'
 import { useContext } from 'react'
+
 
 import './App.css'
 
